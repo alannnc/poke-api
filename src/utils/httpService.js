@@ -3,10 +3,10 @@ const config = require("../config");
 
 class HttpService {
   constructor() {
-    const baseUrl = config.BASE_URL;
+    const baseUrl = config.BASE_URL | "https://pokeapi.co/api/v2/";
 
     const axiosConfigRequest = {
-      BASE_URL: `${baseUrl}/`,
+      baseURL: `${baseUrl}/`,
       headers: {
         Accept: "application/json"
       }
