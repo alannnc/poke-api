@@ -1,15 +1,14 @@
-const axios =  require('axios');
-const config = require('../config');
+const axios = require("axios");
+const config = require("../config");
 
 class HttpService {
-
   constructor() {
     const baseUrl = config.BASE_URL;
 
     const axiosConfigRequest = {
-      baseURL: `${baseUrl}/`,
+      BASE_URL: `${baseUrl}/`,
       headers: {
-        Accept: 'application/json'
+        Accept: "application/json"
       }
     };
     this.http = axios.create(axiosConfigRequest);
@@ -18,9 +17,9 @@ class HttpService {
   async get(url) {
     let serviceResult;
     try {
-      console.log({url});
+      console.log({ url });
       serviceResult = await this.http.get(url);
-    } catch(error) {
+    } catch (error) {
       console.log(error);
       throw error;
     }
