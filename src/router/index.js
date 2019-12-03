@@ -16,7 +16,6 @@ router.get("/", async ctx => {
     };
     result = customBody;
   } catch (error) {
-    console.log(error);
     throw error;
   }
 
@@ -36,7 +35,6 @@ router.get("/fight", async ctx => {
     };
     result = customBody;
   } catch (error) {
-    console.log(error);
     throw error;
   }
 

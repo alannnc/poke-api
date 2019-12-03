@@ -25,7 +25,6 @@ class PokeApi {
         `${this.serviceName}/?${paramsQueryString}`
       );
     } catch (error) {
-      console.log(error);
       throw error;
     }
     return result;
@@ -34,14 +33,10 @@ class PokeApi {
   async getPokemonFighters({ A, B }) {
     let result;
     try {
-      // console.log({ A, B });
       const pokemonA = await this.httpService.get(`${this.serviceName}/${A}`);
       const pokemonB = await this.httpService.get(`${this.serviceName}/${B}`);
-      console.log(pokemonA.name);
-      console.log(pokemonB.name);
       result = { pokemonA, pokemonB };
     } catch (error) {
-      console.log(error);
       throw error;
     }
     return result;
