@@ -17,10 +17,8 @@ class HttpService {
   async get(url) {
     let serviceResult;
     try {
-      console.log({ url });
       serviceResult = await this.http.get(url);
     } catch (error) {
-      console.log(error);
       throw error;
     }
     return serviceResult.data;
