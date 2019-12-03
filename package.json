@@ -9,7 +9,10 @@
   "scripts": {
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production node app.js"
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "8.16.2"
   },
   "author": "Alan Castro",
   "license": "ISC",
