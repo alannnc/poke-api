@@ -10,6 +10,8 @@ npm i || yarn
 
 ## Usage
 
+Copy .env.example and renamed to .env, and don't forget to add required keys!
+
 Start dev server:
 
 ```bash
