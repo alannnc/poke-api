@@ -1,7 +1,7 @@
 const Router = require("koa-router");
 const compose = require("koa-compose");
 const router = new Router();
-const PokeApi = require("../controller/index");
+const PokeApi = require("../controller/PokeApi");
 
 router.get("/pokemons", async ctx => {
   const { page } = ctx.query;

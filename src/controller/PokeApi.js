@@ -14,7 +14,7 @@ class PokeApi {
       limit: 21
     };
 
-    if (params.page) {
+    if (params && params.page) {
       searchParams.offset = params.page * 21;
     }
 
