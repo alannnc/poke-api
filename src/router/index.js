@@ -3,7 +3,7 @@ const compose = require("koa-compose");
 const router = new Router();
 const PokeApi = require("../controller/index");
 
-router.get("/", async ctx => {
+router.get("/pokemons", async ctx => {
   const { page } = ctx.query;
   const pokeService = new PokeApi();
   let result;
@@ -25,9 +25,12 @@ router.get("/", async ctx => {
 
 router.get("/fight", async ctx => {
   const { A, B } = ctx.query;
+  if (!A && !B) {
+    ctx.status = 404;
+    return;
+  }
   const pokeService = new PokeApi();
   let result;
-
   try {
     const serviceResult = await pokeService.getPokemonFighters({ A, B });
     const customBody = {
