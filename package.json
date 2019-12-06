@@ -4,12 +4,17 @@
   "main": "app.js",
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.1"
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1",
+    "supertest": "^4.0.2"
   },
   "scripts": {
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "prettier": "prettier --write 'src/**/*.{js,jsx}'",
+    "test": "jest --forceExit --detectOpenHandles"
   },
   "engines": {
     "node": "8.16.2"
